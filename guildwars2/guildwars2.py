@@ -7,6 +7,8 @@ import json
 import os
 import aiohttp
 
+##INCOMPLETE
+
 try:
     from bs4 import BeautifulSoup
     soupAvailable = True
