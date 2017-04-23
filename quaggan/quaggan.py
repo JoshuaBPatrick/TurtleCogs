@@ -26,16 +26,15 @@ class Quaggan:
         await self.bot.say(quagganList)
 
 def check_folders():
-    folders = ("data/quaggan/")
-    for folder in folders:
-        if not os.path.exists(folder):
-            print("Creating " + folder + " folder...")
-            os.makedirs(folder)
+    folder = ("data/quaggan/")
+    if not os.path.exists(folder):
+        print("Creating quaggan folder...")
+        os.makedirs(folder)
             
 def check_files():
     if not os.path.isfile("data/quaggan/settings.json")
         print("Creating empty settings.json...")
-        dataIO.save_json("data/trivia/settings.json", {})
+        dataIO.save_json("data/quaggan/settings.json", {})
 
 def setup(bot):
     check_folders()
