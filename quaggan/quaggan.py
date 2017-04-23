@@ -32,7 +32,7 @@ def check_folders():
         os.makedirs(folder)
             
 def check_files():
-    if not os.path.isfile("data/quaggan/settings.json")
+    if not os.path.isfile("data/quaggan/settings.json"):
         print("Creating empty settings.json...")
         dataIO.save_json("data/quaggan/settings.json", {})
 
