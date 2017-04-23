@@ -6,7 +6,7 @@ from __main__ import settings as bot_settings
 from __main__ import send_cmd_help
 from cogs.utils.dataIO import dataIO
 import random
-import urllib
+import urllib2
 
 SETTINGS = "data/quaggan/settings.json"
 
@@ -21,7 +21,7 @@ class Quaggan:
     @commands.command(pass_context=True)
     async def quaggan(self, ctx, search):
         link = "https://api.guildwars2.com/v2/quaggans"
-        f = urllib.urlopen(link)
+        f = urllib2.urlopen(link)
         quagganList = f.read()
         await self.bot.say(quagganList)
 
